@@ -1,6 +1,8 @@
 package api_test.gist;
 
-import java.security.acl.Owner;
+import com.google.gson.annotations.SerializedName;
+
+
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -10,169 +12,166 @@ public class Gist {
 	/*
 	 * POJO based in https://developer.github.com/v3/gists/
 	 * */
-	
 	private String url;
-    private String forksUrl;
-    private String commitsUrl;
-    private String id;
-    private String description;
-	    
-    private boolean isPublic;
-        
-    private User owner;
-    private String user;
-    private Map<String, GistFiles> files;
-    private boolean truncated;
-    private int comments;
-    private String commentsUrl;
-    private String htmlUrl;
-    private String gitPullUrl;
-    private String gitPushUrl;
-    private Date createdAt;
-    private Date updatedAt;
-    
-    public String getUrl() {
-        return url;
-    }
+	private String forksUrl;
+	private String commitsUrl;
+	private String id;
+	private String description;
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
+	@SerializedName("public")
+	private boolean isPublic;
 
-    public String getForksUrl() {
-        return forksUrl;
-    }
+	private User owner;
+	private String user;
+	private Map<String, GistFiles> files;
+	private boolean truncated;
+	private int comments;
+	private String commentsUrl;
+	private String htmlUrl;
+	private String gitPullUrl;
+	private String gitPushUrl;
+	private Date createdAt;
+	private Date updatedAt;
 
-    public void setForksUrl(String forksUrl) {
-        this.forksUrl = forksUrl;
-    }
+	public String getUrl() {
+		return url;
+	}
 
-    public String getCommitsUrl() {
-        return commitsUrl;
-    }
+	public void setUrl(String url) {
+		this.url = url;
+	}
 
-    public void setCommitsUrl(String commitsUrl) {
-        this.commitsUrl = commitsUrl;
-    }
+	public String getForksUrl() {
+		return forksUrl;
+	}
 
-    public String getId() {
-        return id;
-    }
+	public void setForksUrl(String forksUrl) {
+		this.forksUrl = forksUrl;
+	}
 
-    public void setId(String id) {
-        this.id = id;
-    }
+	public String getCommitsUrl() {
+		return commitsUrl;
+	}
 
-    public String getDescription() {
-        return description;
-    }
+	public void setCommitsUrl(String commitsUrl) {
+		this.commitsUrl = commitsUrl;
+	}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+	public String getId() {
+		return id;
+	}
 
-    public boolean isPublic() {
-        return isPublic;
-    }
+	public void setId(String id) {
+		this.id = id;
+	}
 
-    public void setPublic(boolean aPublic) {
-        isPublic = aPublic;
-    }
+	public String getDescription() {
+		return description;
+	}
 
-    public User getOwner() {
-        return owner;
-    }
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
-    public void setOwner(User owner) {
-        this.owner = owner;
-    }
+	public boolean isPublic() {
+		return isPublic;
+	}
 
-    public String getUser() {
-        return user;
-    }
+	public void setPublic(boolean aPublic) {
+		isPublic = aPublic;
+	}
 
-    public void setUser(String user) {
-        this.user = user;
-    }
+	public User getOwner() {
+		return owner;
+	}
 
-    public boolean isTruncated() {
-        return truncated;
-    }
+	public void setOwner(User owner) {
+		this.owner = owner;
+	}
 
-    public void setTruncated(boolean truncated) {
-        this.truncated = truncated;
-    }
+	public String getUser() {
+		return user;
+	}
 
-    public int getComments() {
-        return comments;
-    }
+	public void setUser(String user) {
+		this.user = user;
+	}
 
-    public void setComments(int comments) {
-        this.comments = comments;
-    }
+	public boolean isTruncated() {
+		return truncated;
+	}
 
-    public String getCommentsUrl() {
-        return commentsUrl;
-    }
+	public void setTruncated(boolean truncated) {
+		this.truncated = truncated;
+	}
 
-    public void setCommentsUrl(String commentsUrl) {
-        this.commentsUrl = commentsUrl;
-    }
+	public int getComments() {
+		return comments;
+	}
 
-    public String getHtmlUrl() {
-        return htmlUrl;
-    }
+	public void setComments(int comments) {
+		this.comments = comments;
+	}
 
-    public void setHtmlUrl(String htmlUrl) {
-        this.htmlUrl = htmlUrl;
-    }
+	public String getCommentsUrl() {
+		return commentsUrl;
+	}
 
-    public String getGitPullUrl() {
-        return gitPullUrl;
-    }
+	public void setCommentsUrl(String commentsUrl) {
+		this.commentsUrl = commentsUrl;
+	}
 
-    public void setGitPullUrl(String gitPullUrl) {
-        this.gitPullUrl = gitPullUrl;
-    }
+	public String getHtmlUrl() {
+		return htmlUrl;
+	}
 
-    public String getGitPushUrl() {
-        return gitPushUrl;
-    }
+	public void setHtmlUrl(String htmlUrl) {
+		this.htmlUrl = htmlUrl;
+	}
 
-    public void setGitPushUrl(String gitPushUrl) {
-        this.gitPushUrl = gitPushUrl;
-    }
+	public String getGitPullUrl() {
+		return gitPullUrl;
+	}
 
-    public Date getCreatedAt() {
-        return createdAt;
-    }
+	public void setGitPullUrl(String gitPullUrl) {
+		this.gitPullUrl = gitPullUrl;
+	}
 
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
+	public String getGitPushUrl() {
+		return gitPushUrl;
+	}
 
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
+	public void setGitPushUrl(String gitPushUrl) {
+		this.gitPushUrl = gitPushUrl;
+	}
 
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
-    }
+	public Date getCreatedAt() {
+		return createdAt;
+	}
 
-    public Map<String, GistFiles> getFiles() {
-        return files;
-    }
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
 
-    public void setFiles(Map<String, GistFiles> files) {
-        this.files = files;
-    }
+	public Date getUpdatedAt() {
+		return updatedAt;
+	}
 
-    public void setFile(String name, GistFiles file) {
-        Map<String, GistFiles> files = new HashMap<String, GistFiles>();
-        files.put(name, file);
-        setFiles(files);
-    }
-    
-    
-    
+	public void setUpdatedAt(Date updatedAt) {
+		this.updatedAt = updatedAt;
+	}
+
+	public Map<String, GistFiles> getFiles() {
+		return files;
+	}
+
+	public void setFiles(Map<String, GistFiles> files) {
+		this.files = files;
+	}
+
+	public void setFile(String name, GistFiles file) {
+		Map<String, GistFiles> files = new HashMap<>();
+		files.put(name, file);
+		setFiles(files);
+	}
 }
