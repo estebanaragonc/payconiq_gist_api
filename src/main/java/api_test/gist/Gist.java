@@ -174,4 +174,5 @@ public class Gist {
 		files.put(name, file);
 		setFiles(files);
 	}
+			
 }
