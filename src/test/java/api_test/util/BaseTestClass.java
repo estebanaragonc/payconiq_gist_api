@@ -9,7 +9,7 @@ import static com.jayway.restassured.RestAssured.given;
 public class BaseTestClass {
 
 	private final String token = PropertyManager.get("git.token");
-    private final String baseUrl = "https://api.github.com/gists"; //PropertyManager.get("url");
+    private final String baseUrl = PropertyManager.get("url");
     private final RequestSpecification requestSpecification = new RequestSpecBuilder().setBaseUri(baseUrl).build();
     
     public  RequestSpecification getGivenAuth() {
