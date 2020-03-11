@@ -21,4 +21,5 @@ In order to execute the test scripts please follow: 
 
 To validate until the 'update process' please comment the "deleteGist()" method , then execute steps 7 and 8 and then go to https://gist.github.com/YOUR-REPOSITORYNAME-HERE and then validate that the gist 'elvis.payconiq' was created and check the 'revisions' to validate it was updated.
 
+
 To validate the 'delete' process just let the method 'deleteGist()' uncommented and execute steps 7 and 8. The gist is not going to be displayed in gist list because it was deleted.
