@@ -5,7 +5,7 @@ In order to execute the test scripts please follow: 
 1. Clone the repo
 2. Generate a personal access token in https://github.com/settings/tokens
 3. Update the token in the property file in payconiq_gist_api/target/test-classes/gist.properties
-4.  Open bash in the directory where the repository was cloned
+4. Open bash in the directory where the repository was cloned
 5. Execute mvn eclipse:eclipse and wait until get the BUILD SUCCESS message in console
 6. Open eclipse and add a new maven project and specify the directory cloned, then finish the import
 7. Right click in the project and properties/testNG and uncheck the 'use project testNG jar'
