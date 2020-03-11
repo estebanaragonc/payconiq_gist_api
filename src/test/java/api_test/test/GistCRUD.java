@@ -101,7 +101,7 @@ public class GistCRUD extends BaseTestClass{
     @Test(description = "Step 4 - Delete the gist created and updated",
     		dependsOnMethods = "updateGist")
     public void deleteGist()
-    {
+   {
     	// based in documentation https://developer.github.com/v3/gists/#delete-a-gist
     	// DELETE /gists/:gist_id
     	Response response = getGivenAuth().delete("/" + gistId).andReturn();
